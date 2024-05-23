@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>All Jay Gaco</title>
-    <link href="output.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <header>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
-        alt="default profile picture"
-        width="100px"
-      />
-      <h1>All Jay Gaco</h1>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>All Jay Gaco</title>
+  <link href="output.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex h-screen bg-gray-100 flex-col ">
+  <header class="flex justify-evenly items-center bg-blue-500 text-white p-4">
+    <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png"
+      alt="default profile picture" width="100px" />
+    <div>
+      <h1 class="text-3xl">All Jay Gaco</h1>
       <p>Front End Web Developer</p>
-    </header>
-    <br />
-    <main>
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-          voluptatem, quod, quasi, quam debitis quos quidem quaerat voluptatum,
-          quas quasquam, quae, quibusdam, quod, quia, quos, voluptatem, quam
-          quidem.
-        </p>
-      </section>
-      <br />
-      <strong><a href="/resume.html">My Resume</a></strong>
-      <br />
-      <h2>My Projects</h2>
+    </div>
+  </header>
+  <br />
+  <main class="flex flex-col flex-grow justify-evenly">
+    <section class="flex justify-center items-center flex-col">
+      <h2 class="text-3xl">About Me</h2>
+      <br>
+      <p class="text-gray-700 w-3/4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+        voluptatem, quod, quasi, quam debitis quos quidem quaerat voluptatum,
+        quas quasquam, quae, quibusdam, quod, quia, quos, voluptatem, quam
+        quidem.
+      </p>
+    </section>
+    <div class="flex justify-center items-center ">
+      <a class="transition duration-300 ease-in-out h-10 border-blue-500 customer-border w-1/2  flex justify-center items-center text-xl hover:bg-blue-500 hover:text-white rounded"
+        href="/resume.html">My
+        Resume</a>
+    </div>
+    <section class="flex justify-center items-center flex-col">
+      <h2 class="text-3xl">My Projects</h2>
       <ul>
         <li>To Do List</li>
         <li>Weather App</li>
         <li>Calculator</li>
         <li>HVAC Landing Page</li>
       </ul>
-    </main>
+    </section>
+  </main>
+  <footer class="bg-blue-500 text-white p-4 flex justify-evenly">
+    <p>Copyright &copy; All Jay Gaco</p>
+    <a class="text-center w-16 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500"
+      href="mailto:alljaygaco213@gmail.com">Email</a>
+    <a href="tel:6476094761"
+      class="text-center w-16 rounded transition duration-300 ease-in-out hover:bg-white hover:text-blue-500">Phone</a>
+  </footer>
+  <script type="module" src="script.js"></script>
+</body>
 
-    <script type="module" src="script.js"></script>
-  </body>
 </html>
