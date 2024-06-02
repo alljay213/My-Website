@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./*.{html,js,css}"],
   theme: {
-    extend: {},
+    extend: {
+      filter: {
+        white: "invert(100%) brightness(100%)",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-filters")],
 };
