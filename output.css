@@ -41,8 +41,8 @@
 }
 
 #my-cv:hover img {
-  filter: invert(61%) sepia(100%) saturate(2344%) hue-rotate(190deg)
-    brightness(101%) contrast(101%); /* Approximation for blue-500 */
+  filter: invert(61%) sepia(100%) saturate(2344%) hue-rotate(190deg) brightness(101%) contrast(101%);
+  /* Approximation for blue-500 */
 }
 
 html,
@@ -606,9 +606,7 @@ video {
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .resize {
@@ -625,4 +623,28 @@ video {
 
 .outline {
   outline-style: solid;
+}
+
+
+.underline-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
